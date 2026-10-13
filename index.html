@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Baba Shyam Jewellers</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=Jost:wght@300;400;500&display=swap"
@@ -11,64 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="./images/gold/logo.png">
     <link rel="apple-touch-icon" href="./images/gold/logo.png">
-    <style>
-        /* gold collection card style – same as collection pages */
-        .pc .im {
-            background: radial-gradient(circle at 50% 40%, #4a3510, #0e0a05 80%);
-        }
-
-        .pc .im::after {
-            content: "Add image";
-            position: absolute;
-            inset: 0;
-            display: grid;
-            place-items: center;
-            color: rgba(212, 175, 55, .35);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: .75rem;
-            z-index: 0;
-        }
-
-        .pc .im img {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(.8);
-            transition: 1s;
-        }
-
-        .pc:hover .im img {
-            transform: scale(1.1);
-            filter: brightness(1);
-        }
-
-        /* ===== FIX: showcase video now sits ON TOP of the reel ===== */
-        .vf {
-            position: relative;
-        }
-        .vf video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 2;
-            background: #000;
-            box-shadow: 0 0 40px rgba(212, 175, 55, .35);
-        }
-        .vf .reel {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-        .vf span {
-            z-index: 5;
-        }
-    </style>
 </head>
 
 <body>
@@ -79,12 +21,14 @@
             <h1>Timeless <em>Gold</em> &amp; Silver Jewellery</h1>
             <p>Handcrafted heirlooms blending traditional artistry with modern elegance — 24K, 22K &amp; 18K gold and
                 pure silver masterpieces.</p>
-            <div class="btns"><a href="collection.html" class="btn bg">Explore Collection</a><a href="rates.html"
-                    class="btn bl">Today's Rates</a></div>
+            <div class="btns">
+                <a href="collection.html" class="btn bg">Explore Collection</a>
+                <a href="rates.html" class="btn bl">Today's Rates</a>
+            </div>
         </div>
         <div class="arch">
             <div class="stage" id="stage"></div>
-            <video autoplay muted loop playsinline>
+            <video autoplay muted loop playsinline preload="metadata" poster="images/gold/hero-poster.jpg">
                 <source src="hero.mp4" type="video/mp4">
             </video>
             <div class="badge"><b>BIS</b><small>Hallmarked</small></div>
@@ -443,34 +387,35 @@
 
         </div><!-- /.cg -->
 
-        <div style="text-align:center;margin-top:46px"><a href="collection.html" class="btn bg">View Full Collection</a>
+        <div style="text-align:center;margin-top:46px">
+            <a href="collection.html" class="btn bg">View Full Collection</a>
         </div>
     </section>
 
     <!-- ===== CRAFTSMANSHIP SPLIT ===== -->
-<section>
-    <div class="split">
-        <div class="rv">
-            <div class="kick">Our Craftsmanship</div>
-            <h2 class="h2">Where <em>Art</em> Meets Precision</h2>
-            <p>Every ornament blends age-old techniques with contemporary design, shaped by master artisans.</p>
-            <ul class="fl">
-                <li>100% BIS Hallmarked Gold</li>
-                <li>Certified Pure Silver (999 &amp; 925)</li>
-                <li>Custom Design &amp; Bridal Consultation</li>
-                <li>Lifetime Exchange &amp; Buyback</li>
-            </ul>
+    <section>
+        <div class="split">
+            <div class="rv">
+                <div class="kick">Our Craftsmanship</div>
+                <h2 class="h2">Where <em>Art</em> Meets Precision</h2>
+                <p>Every ornament blends age-old techniques with contemporary design, shaped by master artisans.</p>
+                <ul class="fl">
+                    <li>100% BIS Hallmarked Gold</li>
+                    <li>Certified Pure Silver (999 &amp; 925)</li>
+                    <li>Custom Design &amp; Bridal Consultation</li>
+                    <li>Lifetime Exchange &amp; Buyback</li>
+                </ul>
+            </div>
+            <div class="vf rv">
+                <span>Showcase Reel</span>
+                <video autoplay muted loop playsinline preload="metadata" id="showcaseVid"
+                    poster="images/gold/showcase-poster.jpg">
+                    <source src="./showcase.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-     <div class="vf rv">
-    <span>Showcase Reel</span>
-    <video autoplay muted loop playsinline id="showcaseVid"
-           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:9;background:#000">
-        <source src="./showcase.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== STATS ===== -->
     <div class="stats rv">
@@ -535,19 +480,19 @@
             <div class="orn">◆</div>
         </div>
         <div class="rg rv">
-            <div class="rc ">
+            <div class="rc">
                 <div class="m">Gold</div>
                 <h3>24K</h3>
                 <div class="pv" id="gold24"></div>
                 <div class="ch" id="c_gold24"></div><small>per gram (INR)</small>
             </div>
-            <div class="rc ">
+            <div class="rc">
                 <div class="m">Gold</div>
                 <h3>22K</h3>
                 <div class="pv" id="gold22"></div>
                 <div class="ch" id="c_gold22"></div><small>per gram (INR)</small>
             </div>
-            <div class="rc ">
+            <div class="rc">
                 <div class="m">Gold</div>
                 <h3>18K</h3>
                 <div class="pv" id="gold18"></div>
@@ -565,30 +510,25 @@
 
     <script src="app.js"></script>
 
-    <!-- ===== FIX: clear reel + force showcase video to play ===== -->
+    <!-- ===== Showcase video autoplay fix ===== -->
     <script>
-    (function fixShowcase() {
-        // 1. Remove any old reel slides that sit on top of the video
-        const reel = document.getElementById('reel');
-        if (reel) reel.innerHTML = '';
-
-        // 2. Force the video to play (some browsers pause autoplay)
-        const vid = document.getElementById('showcaseVid');
-        if (vid) {
-            vid.muted = true;         // required for autoplay
+        (function fixShowcase() {
+            const vid = document.getElementById('showcaseVid');
+            if (!vid) return;
+            vid.muted = true;
             vid.playsInline = true;
             const tryPlay = () => {
                 const p = vid.play();
-                if (p && p.catch) p.catch(() => {
-                    // Autoplay blocked — retry on first user interaction
-                    document.addEventListener('click', () => vid.play(), { once: true });
-                    document.addEventListener('touchstart', () => vid.play(), { once: true });
-                });
+                if (p && p.catch) {
+                    p.catch(() => {
+                        document.addEventListener('click', () => vid.play(), { once: true });
+                        document.addEventListener('touchstart', () => vid.play(), { once: true });
+                    });
+                }
             };
             if (vid.readyState >= 2) tryPlay();
             else vid.addEventListener('loadeddata', tryPlay, { once: true });
-        }
-    })();
+        })();
     </script>
 </body>
 
