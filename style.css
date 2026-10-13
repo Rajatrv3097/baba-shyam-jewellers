@@ -1,5 +1,5 @@
 /* ============================================================
-   BABA SHYAM JEWELLERS — RESPONSIVE STYLESHEET
+   BABA SHYAM JEWELLERS — RESPONSIVE STYLESHEET (FINAL)
    ============================================================ */
 
 :root {
@@ -116,7 +116,7 @@ header {
     font-size: 1.55rem;
     font-weight: 700;
     line-height: 1;
-    z-index: 1100;
+    z-index: 1300;
     position: relative;
 }
 
@@ -152,7 +152,7 @@ header {
     object-fit: contain;
 }
 
-/* ===== NAV ===== */
+/* ===== NAV (DESKTOP) ===== */
 nav {
     display: flex;
     align-items: center;
@@ -206,7 +206,7 @@ nav a.on::after {
     color: var(--gold);
     font-size: 1.8rem;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1300;
     position: relative;
     padding: 8px;
     line-height: 1;
@@ -270,7 +270,7 @@ section {
 /* ===== JALI BACKGROUND ===== */
 .jali {
     background-color: var(--bg2);
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 0, transparent 11px, rgba(212, 175, 55, .09) 12px, transparent 13px),
         radial-gradient(circle at 0 50%, transparent 11px, rgba(212, 175, 55, .09) 12px, transparent 13px);
     background-size: 44px 44px;
@@ -330,7 +330,7 @@ section {
     gap: 50px;
     align-items: center;
     padding: 60px 6%;
-    background: 
+    background:
         radial-gradient(circle at 80% 40%, rgba(212, 175, 55, .2), transparent 50%),
         linear-gradient(rgba(12, 9, 6, .8), rgba(12, 9, 6, .92)),
         url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1920&q=80') center/cover;
@@ -434,7 +434,7 @@ section {
 .page-hero {
     padding: 90px 6% 70px;
     text-align: center;
-    background: 
+    background:
         radial-gradient(circle at 50% 0, rgba(212, 175, 55, .2), transparent 60%),
         var(--bg2);
     border-bottom: 1px solid rgba(212, 175, 55, .2);
@@ -807,7 +807,7 @@ section {
     gap: 30px;
     text-align: center;
     padding: 90px 6%;
-    background: 
+    background:
         linear-gradient(rgba(12, 9, 6, .9), rgba(12, 9, 6, .9)),
         url('https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=1600&q=80') center/cover fixed;
     width: 100%;
@@ -1307,10 +1307,18 @@ footer a:hover {
     /* --- Mobile Menu Button --- */
     .mb {
         display: block;
-        z-index: 1100;
+        z-index: 1300;
+        position: relative;
+        background: none;
+        border: 0;
+        color: var(--gold);
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 8px;
+        line-height: 1;
     }
 
-    /* --- Mobile Navigation --- */
+    /* --- Mobile Navigation (HIDDEN by default) --- */
     nav {
         position: static;
     }
@@ -1323,25 +1331,31 @@ footer a:hover {
         max-width: 340px;
         height: 100vh;
         height: 100dvh;
-        background: rgba(12, 9, 6, .98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: #0c0906;
         flex-direction: column;
         padding: 110px 40px 40px;
         transition: right .45s cubic-bezier(.4, 0, .2, 1);
         border-left: 1px solid var(--gold);
         gap: 8px;
-        z-index: 1050;
+        z-index: 1200;
         overflow-y: auto;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, .6);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, .8);
+        display: flex;
+        margin: 0;
+        list-style: none;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     nav ul.open {
         right: 0;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     nav ul li {
         width: 100%;
+        display: block;
     }
 
     nav a {
@@ -1351,10 +1365,18 @@ footer a:hover {
         letter-spacing: 2.5px;
         border-bottom: 1px solid rgba(212, 175, 55, .12);
         width: 100%;
+        color: var(--cream);
+        text-transform: uppercase;
+        position: relative;
     }
 
     nav a::after {
         display: none;
+    }
+
+    nav a:hover,
+    nav a.on {
+        color: var(--gold);
     }
 
     /* --- Sections --- */
