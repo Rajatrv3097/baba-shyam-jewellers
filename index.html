@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Baba Shyam Jewellers</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="./images/gold/logo.png">
+    <link rel="apple-touch-icon" href="./images/gold/logo.png">
+    <style>
+        /* gold collection card style – same as collection pages */
+        .pc .im {
+            background: radial-gradient(circle at 50% 40%, #4a3510, #0e0a05 80%);
+        }
+
+        .pc .im::after {
+            content: "Add image";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: rgba(212, 175, 55, .35);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: .75rem;
+            z-index: 0;
+        }
+
+        .pc .im img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(.8);
+            transition: 1s;
+        }
+
+        .pc:hover .im img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        /* ===== FIX: showcase video now sits ON TOP of the reel ===== */
+        .vf {
+            position: relative;
+        }
+        .vf video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+            background: #000;
+            box-shadow: 0 0 40px rgba(212, 175, 55, .35);
+        }
+        .vf .reel {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .vf span {
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div>
+            <div class="kick">Since 1999 · Trusted Legacy</div>
+            <h1>Timeless <em>Gold</em> &amp; Silver Jewellery</h1>
+            <p>Handcrafted heirlooms blending traditional artistry with modern elegance — 24K, 22K &amp; 18K gold and
+                pure silver masterpieces.</p>
+            <div class="btns"><a href="collection.html" class="btn bg">Explore Collection</a><a href="rates.html"
+                    class="btn bl">Today's Rates</a></div>
+        </div>
+        <div class="arch">
+            <div class="stage" id="stage"></div>
+            <video autoplay muted loop playsinline>
+                <source src="hero.mp4" type="video/mp4">
+            </video>
+            <div class="badge"><b>BIS</b><small>Hallmarked</small></div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED GOLD COLLECTION (static cards) ===== -->
+    <section class="jali">
+        <div class="sh rv">
+            <div class="kick">Featured</div>
+            <h2>Our Exclusive Collection</h2>
+            <div class="orn">◆</div>
+        </div>
+
+        <div class="cg">
+
+            <!-- CARD – Bridal Necklace Set -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/necklace-1.jpg" alt="Bridal Necklace Set" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Bridal Necklace Set</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Bridal%20Necklace%20Set">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Necklace 2 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/necklace-2.jpg" alt="Necklace Design" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Necklace Design</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Necklace%20Design">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Necklace 3 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/necklace-3.jpg" alt="Necklace Design" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Necklace Design</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Necklace%20Design">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Necklace 4 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/necklace-4.jpg" alt="Necklace Design" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Necklace Design</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Necklace%20Design">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Solitaire Ring -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/ring-1.jpg" alt="Solitaire Ring" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Solitaire Ring</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Solitaire%20Ring">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Ring 2 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/ring-2.jpg" alt="Crafted Ring" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Crafted Ring</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Crafted%20Ring">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Ring 3 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/ring-3.jpg" alt="Crafted Ring" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Crafted Ring</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Crafted%20Ring">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Ring 4 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/ring-4.jpg" alt="Unique Ring" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Unique Ring</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Unique%20Ring">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Kada 2 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/kada-2.jpg" alt="Gents Kada" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Gents Kada</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Gents%20Kada">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Kada 3 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/kada-3.jpg" alt="Gents Kada" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Gents Kada</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Gents%20Kada">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Kada 4 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/kada-4.jpg" alt="Latest Gents Kada" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Latest Gents Kada</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Latest%20Gents%20Kada">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Kada 5 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/kada-5.jpg" alt="Latest Gents Kada" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Latest Gents Kada</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Latest%20Gents%20Kada">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Temple Haar -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/haar-1.jpg" alt="Temple Haar" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Temple Haar</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Temple%20Haar">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Jhumka Earrings -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/jhumka-1.jpg" alt="Jhumka Earrings" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Jhumka Earrings</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Jhumka%20Earrings">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Floral Studs -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/studs-1.jpg" alt="Floral Studs" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">18K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Floral Studs</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Floral%20Studs">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Traditional Bangles 1 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/bangles-1.jpg" alt="Traditional Bangles" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Traditional Bangles</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Traditional%20Bangles">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Traditional Bangles 2 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/bangles-2.jpg" alt="Traditional Bangles" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Traditional Bangles</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Traditional%20Bangles">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Traditional Bangles 3 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/bangles-3.jpg" alt="Traditional Bangles" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Traditional Bangles</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Traditional%20Bangles">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Traditional Bangles 4 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/bangles-4.jpg" alt="Traditional Bangles" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Traditional Bangles</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Traditional%20Bangles">Enquire</a>
+                </div>
+            </div>
+
+            <!-- CARD – Traditional Bangles 5 -->
+            <div class="pc">
+                <div class="im">
+                    <img src="images/gold/bangles-5.jpg" alt="Traditional Bangles" loading="lazy"
+                        onerror="this.style.display='none'">
+                    <span class="tg">22K Gold</span>
+                </div>
+                <div class="in">
+                    <div>
+                        <h3>Traditional Bangles</h3>
+                        <p>Hallmarked · Custom sizes</p>
+                    </div>
+                    <a target="_blank" rel="noopener"
+                        href="https://wa.me/919876543210?text=I%20am%20interested%20in%20Traditional%20Bangles">Enquire</a>
+                </div>
+            </div>
+
+        </div><!-- /.cg -->
+
+        <div style="text-align:center;margin-top:46px"><a href="collection.html" class="btn bg">View Full Collection</a>
+        </div>
+    </section>
+
+    <!-- ===== CRAFTSMANSHIP SPLIT ===== -->
+<section>
+    <div class="split">
+        <div class="rv">
+            <div class="kick">Our Craftsmanship</div>
+            <h2 class="h2">Where <em>Art</em> Meets Precision</h2>
+            <p>Every ornament blends age-old techniques with contemporary design, shaped by master artisans.</p>
+            <ul class="fl">
+                <li>100% BIS Hallmarked Gold</li>
+                <li>Certified Pure Silver (999 &amp; 925)</li>
+                <li>Custom Design &amp; Bridal Consultation</li>
+                <li>Lifetime Exchange &amp; Buyback</li>
+            </ul>
+        </div>
+     <div class="vf rv">
+    <span>Showcase Reel</span>
+    <video autoplay muted loop playsinline id="showcaseVid"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:9;background:#000">
+        <source src="showcase.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+    </div>
+</section>
+
+    <!-- ===== STATS ===== -->
+    <div class="stats rv">
+        <div>
+            <h3>40+</h3>
+            <p>Years of Trust</p>
+        </div>
+        <div>
+            <h3>50K+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div>
+            <h3>100%</h3>
+            <p>Certified Purity</p>
+        </div>
+        <div>
+            <h3>5000+</h3>
+            <p>Unique Designs</p>
+        </div>
+    </div>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section>
+        <div class="sh rv">
+            <div class="kick">Testimonials</div>
+            <h2>Customer Love</h2>
+            <div class="orn">◆</div>
+        </div>
+        <div class="g3 rv">
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>Bought my daughter's bridal set here. Breathtaking craftsmanship and transparent rates.</p>
+                <div class="n">— Anjali Sharma</div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>Their silver collection is unmatched. A loyal customer for over 15 years.</p>
+                <div class="n">— Rajesh Verma</div>
+            </div>
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>The showcase videos helped me pick the perfect gift from home.</p>
+                <div class="n">— Priya Mehta</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+        <div class="sh rv" style="margin:0 auto">
+            <h2>Planning a Wedding or Festive Purchase?</h2>
+            <p>Book a private consultation with our design experts.</p>
+            <div style="margin-top:28px"><a href="contact.html" class="btn bg">Book Consultation</a></div>
+        </div>
+    </section>
+
+    <!-- ===== RATES ===== -->
+    <section>
+        <div class="sh rv">
+            <div class="kick">Delhi Market</div>
+            <h2>Today's Gold &amp; Silver Rates</h2>
+            <div class="orn">◆</div>
+        </div>
+        <div class="rg rv">
+            <div class="rc ">
+                <div class="m">Gold</div>
+                <h3>24K</h3>
+                <div class="pv" id="gold24"></div>
+                <div class="ch" id="c_gold24"></div><small>per gram (INR)</small>
+            </div>
+            <div class="rc ">
+                <div class="m">Gold</div>
+                <h3>22K</h3>
+                <div class="pv" id="gold22"></div>
+                <div class="ch" id="c_gold22"></div><small>per gram (INR)</small>
+            </div>
+            <div class="rc ">
+                <div class="m">Gold</div>
+                <h3>18K</h3>
+                <div class="pv" id="gold18"></div>
+                <div class="ch" id="c_gold18"></div><small>per gram (INR)</small>
+            </div>
+            <div class="rc sv">
+                <div class="m">Silver</div>
+                <h3>999 Fine</h3>
+                <div class="pv" id="silver"></div>
+                <div class="ch" id="c_silver"></div><small>per gram (INR)</small>
+            </div>
+        </div>
+        <p class="upd"><span class="dot"></span><span id="upd"></span></p>
+    </section>
+
+    <script src="app.js"></script>
+
+    <!-- ===== FIX: clear reel + force showcase video to play ===== -->
+    <script>
+    (function fixShowcase() {
+        // 1. Remove any old reel slides that sit on top of the video
+        const reel = document.getElementById('reel');
+        if (reel) reel.innerHTML = '';
+
+        // 2. Force the video to play (some browsers pause autoplay)
+        const vid = document.getElementById('showcaseVid');
+        if (vid) {
+            vid.muted = true;         // required for autoplay
+            vid.playsInline = true;
+            const tryPlay = () => {
+                const p = vid.play();
+                if (p && p.catch) p.catch(() => {
+                    // Autoplay blocked — retry on first user interaction
+                    document.addEventListener('click', () => vid.play(), { once: true });
+                    document.addEventListener('touchstart', () => vid.play(), { once: true });
+                });
+            };
+            if (vid.readyState >= 2) tryPlay();
+            else vid.addEventListener('loadeddata', tryPlay, { once: true });
+        }
+    })();
+    </script>
+</body>
+
+</html>

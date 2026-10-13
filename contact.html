@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact | Baba Shyam Jewellers</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,600&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/gold/logo.png">
+    <link rel="apple-touch-icon" href="./images/gold/logo.png">
+</head>
+
+<body>
+    <div class="page-hero">
+        <div class="kick">Get In Touch</div>
+        <h1>Visit Our Showroom</h1>
+        <p>We would love to help you find your perfect piece.</p>
+        <div class="orn">◆</div>
+    </div>
+
+    <section class="jali">
+        <div class="cw">
+
+            <!-- ===== CONTACT INFO ===== -->
+            <div class="ci rv">
+                <div>
+                    <span class="ic"><span>📞</span></span>
+                    <p><b>Phone</b>+91 9050868986 , 9416374419</p>
+                </div>
+                <div>
+                    <span class="ic"><span>✉️</span></span>
+                    <p><b>Email</b>rajatrv1234@gmail.com</p>
+                </div>
+                <div>
+                    <span class="ic"><span>🕙</span></span>
+                    <p><b>Hours</b>Mon–Sat 10 AM – 8 PM<br>Sunday 11 AM – 5 PM</p>
+                </div>
+            </div>
+
+            <!-- ===== FORM (Web3Forms — styled email via _template: box) ===== -->
+            <form id="wf" class="rv" novalidate>
+
+                <!-- Web3Forms access key -->
+                <input type="hidden" name="access_key" value="b688b535-1df1-490a-afb6-2a6533956aef">
+
+                <!-- ✨ Attractive email subject -->
+                <input type="hidden" name="subject" value="💎 New Enquiry from Baba Shyam Website">
+
+                <!-- Sender display name -->
+                <input type="hidden" name="from_name" value="Baba Shyam Jewellers — Website">
+
+                <!-- 🎨 Beautiful boxed template with gold styling -->
+                <input type="hidden" name="_template" value="box">
+
+                <!-- ✉️ Reply goes straight to the customer -->
+                <input type="hidden" name="replyto" value="">
+
+                <!-- Anti-spam honeypot -->
+                <input type="checkbox" name="botcheck" style="display:none">
+
+                <!-- Auto-reply to customer -->
+                <input type="hidden" name="autoresponse"
+                    value="Thank you for contacting Baba Shyam Jewellers! We have received your enquiry and our team will reach out to you within 24 hours. For urgent assistance, please call us at +91 9050868986. — Team Baba Shyam Jewellers ✨">
+
+                <input name="Name" placeholder="Your Name" required>
+                <input name="email" type="email" placeholder="Your Email" required>
+                <input name="Phone" type="tel" placeholder="Phone Number" required>
+
+                <select name="Interest">
+                    <option>Gold Jewellery</option>
+                    <option>Silver Jewellery</option>
+                    <option>Bridal / Custom Design</option>
+                    <option>Exchange / Buyback</option>
+                </select>
+
+                <textarea name="Message" rows="4" placeholder="Your message"></textarea>
+
+                <button type="submit" class="btn bg" style="align-self:flex-start">Send Enquiry</button>
+
+                <p id="form-status" style="display:none;margin-top:10px;font-size:.85rem;letter-spacing:1px;"></p>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ALL SCRIPTS EMBEDDED
+         ============================================================ -->
+
+    <script>
+    /* ===== SITE CONFIG ===== */
+    const SHOP = {
+        name: "Baba Shyam Jewellers",
+        phone: "+91 9050868986",
+        wa: "+91 9050868986",
+        email: "rajatrv1234@gmail.com",
+        addr: "Jawahar Nagar Camp , Palwal",
+        since: 1999
+    };
+
+    /* ===== TICKER + HEADER + FOOTER + WHATSAPP BUTTON ===== */
+    (function buildShell() {
+        const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+        const links = [
+            ['index.html', 'Home'],
+            ['collection.html', 'Collection'],
+            ['gold-collection.html', 'Gold'],
+            ['rates.html', 'Rates'],
+            ['about.html', 'About'],
+            ['contact.html', 'Contact']
+        ];
+
+        document.body.insertAdjacentHTML('afterbegin', `
+            <div class="ticker"><div>
+                <span>✦ BIS HALLMARKED GOLD &amp; SILVER</span>
+                <span>✦ SINCE 1985</span>
+                <span>✦ DELHI'S TRUSTED JEWELLER</span>
+                <span>✦ BIS HALLMARKED GOLD &amp; SILVER</span>
+                <span>✦ SINCE 1985</span>
+                <span>✦ DELHI'S TRUSTED JEWELLER</span>
+            </div></div>
+            <header>
+                <a href="index.html" class="logo">
+                    <i><b>S</b></i>
+                    <div>Baba Shyam<small>JEWELLERS</small></div>
+                </a>
+                <nav>
+                    <ul id="nl">
+                        ${links.map(l => `<li><a href="${l[0]}" class="${page === l[0] ? 'on' : ''}">${l[1]}</a></li>`).join('')}
+                    </ul>
+                </nav>
+                <button class="mb" id="mb">☰</button>
+            </header>
+        `);
+
+        document.body.insertAdjacentHTML('beforeend', `
+            <footer>
+                <div class="fc">
+                    <div>
+                        <a href="index.html" class="logo">
+                            <i><b>S</b></i>
+                            <div>Baba Shyam<small>JEWELLERS</small></div>
+                        </a>
+                        <p style="margin-top:16px">Crafting elegance in gold &amp; silver since ${SHOP.since}. BIS hallmarked, trusted by generations.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul>${links.map(l => `<li><a href="${l[0]}">${l[1]}</a></li>`).join('')}</ul>
+                    </div>
+                    <div>
+                        <h4>Collections</h4>
+                        <ul>
+                            <li><a href="collection.html#gold">Gold Jewellery</a></li>
+                            <li><a href="collection.html#silver">Silver Jewellery</a></li>
+                            <li><a href="rates.html">Price Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>${SHOP.addr}</p>
+                        <p style="margin-top:8px">${SHOP.phone}<br>${SHOP.email}</p>
+                    </div>
+                </div>
+                <div class="cp">© ${new Date().getFullYear()} ${SHOP.name}. All Rights Reserved.</div>
+            </footer>
+            <a class="wa" target="_blank" rel="noopener"
+               href="https://wa.me/${SHOP.wa}?text=${encodeURIComponent('Hello ' + SHOP.name)}">💬</a>
+        `);
+
+        const mb = document.getElementById('mb');
+        const nl = document.getElementById('nl');
+        if (mb && nl) mb.onclick = () => nl.classList.toggle('open');
+
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.rv').forEach(el => io.observe(el));
+    })();
+
+    /* ===== FORM SUBMIT — Web3Forms ===== */
+    (function attachForm() {
+        const form = document.getElementById('wf');
+        if (!form) return;
+
+        const status = document.getElementById('form-status');
+        const btn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            if (!form.Name.value.trim() || !form.Phone.value.trim() || !form.email.value.trim()) {
+                status.textContent = '❌ Please fill Name, Email and Phone.';
+                status.style.color = '#ff6b6b';
+                status.style.display = 'block';
+                return;
+            }
+
+            const original = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            status.style.display = 'none';
+
+            try {
+                // Set reply-to dynamically to the visitor's email
+                form.replyto.value = form.email.value;
+
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    status.textContent = '✅ Thank you! We will contact you soon.';
+                    status.style.color = '#3ddc84';
+                    status.style.display = 'block';
+                    form.reset();
+                } else {
+                    status.textContent = '❌ ' + (data.message || 'Something went wrong. Please try again.');
+                    status.style.color = '#ff6b6b';
+                    status.style.display = 'block';
+                }
+            } catch (err) {
+                status.textContent = '❌ Network error. Please try again.';
+                status.style.color = '#ff6b6b';
+                status.style.display = 'block';
+            }
+
+            btn.textContent = original;
+            btn.disabled = false;
+        }, true);
+    })();
+    </script>
+</body>
+
+</html>
