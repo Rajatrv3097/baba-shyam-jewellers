@@ -77,8 +77,25 @@ for (const k in ids) {
         c.classList.toggle('down', d < 0);
     }
 }
-const u = document.getElementById('upd');
-if (u) u.textContent = 'Delhi retail rates updated: ' + new Date(RATES.date + 'T' + RATES.time + ':00').toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' IST';
+
+/* ===== LIVE CURRENT DATE & TIME (IST) — updates every minute ===== */
+function updateLiveTime() {
+    const u = document.getElementById('upd');
+    if (!u) return;
+    const now = new Date();
+    const formatted = now.toLocaleString('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+    });
+    u.textContent = 'Delhi retail rates updated: ' + formatted + ' IST';
+}
+updateLiveTime();                          // paint immediately
+setInterval(updateLiveTime, 60 * 1000);    // refresh every minute
 
 /* ===== JEWELLERY ARTWORK (SVG illustrations) ===== */
 document.body.insertAdjacentHTML('beforeend', '<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="mg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="200"><stop offset="0" stop-color="#fff3b8"/><stop offset=".4" stop-color="#e2bb45"/><stop offset=".7" stop-color="#b98a22"/><stop offset="1" stop-color="#f3dc8f"/></linearGradient><linearGradient id="ms" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="200"><stop offset="0" stop-color="#ffffff"/><stop offset=".4" stop-color="#c3c9d0"/><stop offset=".7" stop-color="#7d848c"/><stop offset="1" stop-color="#e9edf1"/></linearGradient></defs></svg>');
